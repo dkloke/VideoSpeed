@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    body {
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        font-size: large;
+    }
+
+    div {
+        display: block;
+        max-width: 40em;
+    }
+
+    button {
+        outline: none;
+        border: 0;
+        margin: 0 1em;
+        padding: 0.25em 0.5em;
+        font-size: inherit;
+    }
+
+    button:disabled,
+    button[disabled] {
+        background-color: #EEE;
+        display: none;
+    }
+
+    button:not([disabled]):hover {
+        background: #E88004;
+    }
+
+    button:active {
+        transform: scale(0.97);
+    }
+
+    img {
+        float: left;
+        margin: 0 1em;
+    }
+
+    input {
+        font-size: 1.1em;
+        width: 4em;
+        text-align: center;
+        margin: 0;
+    }
+
+    /*      input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button {  
+         opacity: 0.6;
+      }*/
+
+    .items>p {
+        border: solid aliceblue;
+        margin: 1em;
+        padding: 1em;
+        clear: both;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .hilite {
+        background-color: aliceblue;
+        color: navy;
+        font-weight: bold;
+    }
+
+    .keys {
+        background-color: lightgray;
+        color: black;
+        font-weight: bold;
+        padding: 0 0.4em;
+    }
+    </style>
+    <link href="customControls.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="clearfix">
+        <p><img src="./images/videospeed128.png">
+            <h1>VideoSpeed</h1>
+        </p>
+        <p>by Dan Kloke &copy;2019 - <a href="https://github.com/muaz-khan/Chrome-Extensions/blob/master/LICENSE" target="_blank" rel="nofollow">MIT / Google</a></p>
+        <p>from a tweet by <a href="https://twitter.com/kentcdodds/status/1069637300458586115" target="_blank" rel="nofollow"> @kentcdodds</a></p>
+    </div>
+    <div class="items">
+        <p>
+            This extension looks for <strong>all</strong> <span class="hilite">&lt;video&gt;</span> elements on the page, and adjusts their playback speed (<span class="hilite">.playbackRate</span>) simultaneously for all tags on the page.
+            <br /><br />
+            Adjust video playback rate using <span class="keys">&uarr;</span>/<span class="keys">&darr;</span> cursor keys, a mouse/touch interface, or manual entry.
+            <br /><br />
+            The app does not send any information to the developer, and only stores user preferences locally. VideoSpeed makes no effort to be compatible with on-page code or other browser apps.
+            <br /><br />
+            Repeated speed adjustments can cause video players to lose audio synchronization. To recover audio sync, try skipping forward/back or adjusting the video's replay position, stop and restart the player, or reload the page.
+        </p>
+        <p>
+            When this setting is disabled, VideoSpeed tries to acquire the current player speed (usually 1, unless previously adjusted with VideoSpeed).
+            <br /><br />
+            <label class="checkBox" for="useDefaultSpeed">Immediately set playback speed when VideoSpeed icon is clicked:
+                <br /><input type="number" id="defaultSpeed" name="defaultSpeed" min="0.1" max="5" step="0.1" />&nbsp;<button id="resetDefaultSpeed" name="resetDefaultSpeed">Reset to 1</button>
+                <input type="checkbox" id="useDefaultSpeed" name="useDefaultSpeed">
+                <span class="checkmark"></span>
+            </label>
+        </p>
+        <p>
+            <label for="stepRate">Step of input field, each <span class="keys">&uarr;</span>/<span class="keys">&darr;</span> keypress or spinner button click increases or decreases the rate by this much:</label>
+            <input type="number" id="stepRate" name="stepRate" min="0" max="1" step="0.1" />
+            &nbsp;<button id="resetStepRate" name="resetStepRate">Reset to 0.1</button>
+        </p>
+        <p>
+            <label class="checkBox">Use mouse wheel to adjust playback rate while hovering over rate input field (not recommended!)
+                <input type="checkbox" id="useMouseWheel" name="useMouseWheel">
+                <span class="checkmark"></span>
+            </label>
+        </p>
+    </div>
+</body>
+<script src="options.js"></script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {display:block;}
+      button {
+        height: 40px;
+        outline: none;
+        border: 0;
+        width: 100%;
+        margin: 3px 0 0 0; 
+      }
+      button:disabled, button[disabled] {
+        background-color: #EEE;
+        display:none;
+      }
+      button:not([disabled]):hover {
+          background-color: #E88004;
+      }
+      button:active {
+          transform: scale(0.97);
+      }
+      label {
+        font-size: 1em;
+        margin-bottom: 3px;
+      }
+      input {
+        font-size: 2em;
+        width: 3.1em;
+        text-align: center;
+        margin: 3px 0;
+        outline: none;
+      }
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button {  
+         opacity: 0.6;
+      }
+      input:focus { background-color: #FFC300; }
+      span {
+        color:#1e90ff;
+        font-size:inherit;
+        cursor:pointer;
+      }
+      #help {display:none;}
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="videospeed">Adjust&nbsp;video&nbsp;<span id="help" name="help">&#9432;</span> .playbackRate</label>
+      <input type="number" id="videospeed" name="videospeed"
+           min="0.1" max="5" step="0.1" autofocus>
+    </div>
+    <button id="reset" name="reset">Reset to Normal</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
