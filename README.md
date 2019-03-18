@@ -1,4 +1,5 @@
 "# VideoSpeed" 
+            <br /><br />
 This extension looks for <strong>all</strong> <span class="hilite">&lt;video&gt;</span> elements on the page, and adjusts their playback speed (<span class="hilite">.playbackRate</span>) simultaneously for all tags on the page.
             <br /><br />
             Adjust video playback rate using <span class="keys">&uarr;</span>/<span class="keys">&darr;</span> cursor keys, a mouse/touch interface, or manual entry.
