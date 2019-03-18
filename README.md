@@ -1,4 +1,7 @@
-"# VideoSpeed" 
+<img src="./images/videospeed128.png">
+            <h1>VideoSpeed</h1>
+by Dan Kloke &copy;2019 - <a href="https://github.com/muaz-khan/Chrome-Extensions/blob/master/LICENSE" target="_blank" rel="nofollow">MIT / Google</a></p>
+        <p>from a tweet by <a href="https://twitter.com/kentcdodds/status/1069637300458586115" target="_blank" rel="nofollow"> @kentcdodds</a></p>
             <br /><br />
 This extension looks for <strong>all</strong> <span class="hilite">&lt;video&gt;</span> elements on the page, and adjusts their playback speed (<span class="hilite">.playbackRate</span>) simultaneously for all tags on the page.
             <br /><br />
