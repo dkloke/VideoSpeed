@@ -1,3 +1,6 @@
+---
+#### This project has been superceeded by VideoScan https://github.com/dkloke/videoscan which has more features.
+---
 <p>
     <img src="images/videospeed128.png">
     <h1>VideoSpeed</h1>
